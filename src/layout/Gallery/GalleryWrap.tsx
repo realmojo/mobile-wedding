@@ -5,19 +5,12 @@ import PhotoGallery from './PhotoGallery.tsx';
 const GalleryWrap = () => {
   const [isMoreView, _] = useState(true);
 
-  // const onClickImageMoreViewButton = () => {
-  //   setIsMoreView(!isMoreView);
-  // };
-
   return (
     <ContentsWrap>
       <ImageMoreWrap isMoreView={isMoreView}>
         {!isMoreView && <WhiteGradientOverlay />}
         <PhotoGallery />
       </ImageMoreWrap>
-      {/* {!isMoreView && (
-        <PlusButton onClick={onClickImageMoreViewButton}>더보기</PlusButton>
-      )} */}
     </ContentsWrap>
   );
 };
