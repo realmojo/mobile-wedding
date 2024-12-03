@@ -25,7 +25,10 @@ const HostInfo = ({ person }: { person: BrideAndGroom }) => {
           {person.parents.map((parent, index) => (
             <React.Fragment key={index}>
               {index > 0 && ' · '}
-              {parent.name}
+              <div style={parent.name === '정병돈' ? { marginLeft: '28px' } : {}}>
+                {parent.name === '전한우' ? <>(故)</> : ''}
+                {parent.name}
+              </div>
             </React.Fragment>
           ))}
         </>
